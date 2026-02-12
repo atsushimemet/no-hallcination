@@ -1,5 +1,5 @@
-import { Outlet, Link, useLocation } from 'react-router';
-import { Search, Plus, Home } from 'lucide-react';
+import { Home, Plus, Search } from 'lucide-react';
+import { Link, Outlet, useLocation } from 'react-router';
 import { Button } from './ui/button';
 
 export function Root() {
@@ -17,7 +17,7 @@ export function Root() {
               </div>
               <div>
                 <h1 className="font-bold text-slate-900">No Hallcination</h1>
-                <p className="text-xs text-slate-500">人間の判断力を取り戻す</p>
+                <p className="text-xs text-slate-500">ハルシネーションをなくす</p>
               </div>
             </Link>
             <Button variant="ghost" size="sm">

@@ -191,6 +191,75 @@ export const mockPosts: Post[] = [
     ],
     arguments: [],
   },
+  {
+    id: '4',
+    question: '1日1回の瞑想習慣でストレスが改善しますか?',
+    aiResponse: '毎日10分程度の瞑想を行うことで、ストレスホルモンであるコルチゾールの低下が期待できます。メタ分析でも「自覚的なストレスの低減」との関連が確認されており、習慣化すれば睡眠の質の向上にもつながるとされています。',
+    aiModel: 'Gemini Pro',
+    createdAt: new Date('2026-02-05'),
+    updatedAt: new Date('2026-02-09'),
+    submitter: '森田翔',
+    status: 'resolved',
+    conclusionLevel: 'B',
+    views: 1044,
+    conclusion: '日常的なマインドフルネス瞑想は、自覚的ストレスの有意な低下と睡眠の質改善に寄与する。医療介入を置き換えるものではないが、補助的ケアとして推奨できる。',
+    arguments: [
+      {
+        id: 'arg4',
+        title: 'ランダム化比較試験での効果',
+        position: 'support',
+        description: '2014年JAMA Internal Medicineに掲載された試験で、マインドフルネス瞑想群が対照群よりストレス指標を有意に改善',
+        votes: 81,
+        evidences: [
+          {
+            id: 'ev5',
+            url: 'https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1809754',
+            title: 'JAMA Intern Med - Mindfulness-Based Therapy',
+            level: 'A',
+            votes: 60,
+            addedBy: '井上真',
+            addedAt: new Date('2026-02-06'),
+          },
+        ],
+      },
+      {
+        id: 'arg5',
+        title: '効果は中程度との指摘',
+        position: 'neutral',
+        description: 'メタ分析では効果量は中程度に留まり、慢性疾患患者では差が縮まるとの報告もある',
+        votes: 41,
+        evidences: [
+          {
+            id: 'ev6',
+            url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3927237/',
+            title: 'Meta-analysis of Mindfulness-Based Stress Reduction',
+            level: 'B',
+            votes: 28,
+            addedBy: '小林優',
+            addedAt: new Date('2026-02-07'),
+          },
+        ],
+      },
+    ],
+    comments: [
+      {
+        id: 'c5',
+        type: 'verification',
+        author: '井上真',
+        content: 'JAMAの試験では8週間の介入でPerceived Stress Scaleのスコアが5.1ポイント改善していました。follow-upでも効果は維持されていました。',
+        createdAt: new Date('2026-02-06'),
+        votes: 38,
+      },
+      {
+        id: 'c6',
+        type: 'discussion',
+        author: '小林優',
+        content: '臨床現場では併用療法として案内しています。瞑想アプリの利用など現実的な導入方法を明記するとさらによいと思います。',
+        createdAt: new Date('2026-02-08'),
+        votes: 19,
+      },
+    ],
+  },
 ];
 
 export function getPostById(id: string): Post | undefined {
